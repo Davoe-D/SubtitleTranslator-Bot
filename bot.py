@@ -51,8 +51,8 @@ def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("About", callback_data="about"),
-                    InlineKeyboardButton("Help", callback_data="help"),
+                    InlineKeyboardButton("😄 About 😄", callback_data="about"),
+                    InlineKeyboardButton("😏 Help 😏", callback_data="help"),
                 ]
             ]
         ),
@@ -72,7 +72,7 @@ def abouts(client, message):
         text=about,
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Give Feedback", url="t.me/bestzbrothers")]]
+            [[InlineKeyboardButton("😍 Give Feedback 😍", url="t.me/bestzbrothers")]]
         ),
     )
 
@@ -127,7 +127,7 @@ def data(client, callback_query):
             text=about,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Give Feedback", url="t.me/bestzbrothers")]]
+                [[InlineKeyboardButton("😍 Give Feedback 😍", url="t.me/bestzbrothers")]]
             ),
         )
     elif rslt == "close":
@@ -136,7 +136,7 @@ def data(client, callback_query):
         callback_query.message.edit(
             text=help_text,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("close", callback_data="close")]]
+                [[InlineKeyboardButton("❌close ❌", callback_data="close")]]
             ),
         )
     else:
